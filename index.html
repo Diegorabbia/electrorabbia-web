@@ -1,0 +1,890 @@
+HTML
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- SEO -->
+    <meta name="description" content="ELECTRORABBIA - Energía que se transforma en soluciones. Especialistas en materiales eléctricos, iluminación LED, energía solar y sistemas de seguridad electrónica en Rufino, Santa Fe.">
+    <meta name="keywords" content="electricista en Rufino, energía solar Rufino, paneles solares Santa Fe, instalación solar, Growatt Argentina, cámaras Dahua, materiales eléctricos, iluminación LED, electricidad industrial, sistemas fotovoltaicos">
+    <title>ELECTRORABBIA | Soluciones Eléctricas y Solares</title>
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;800&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        /* Variables de color y diseño */
+        :root {
+            --primary-blue: #0055ff;
+            --primary-blue-hover: #3377ff;
+            --bg-black: #0a0a0a;
+            --bg-dark-gray: #151515;
+            --text-white: #ffffff;
+            --text-gray: #b3b3b3;
+            --transition: all 0.3s ease;
+        }
+
+        /* Reseteo general */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Montserrat', sans-serif;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background-color: var(--bg-black);
+            color: var(--text-white);
+            line-height: 1.6;
+        }
+
+        h1, h2, h3, h4 {
+            font-weight: 800;
+        }
+
+        a {
+            text-decoration: none;
+            color: var(--text-white);
+        }
+
+        /* Botones Globales */
+        .btn {
+            display: inline-block;
+            padding: 12px 28px;
+            background-color: var(--primary-blue);
+            color: var(--text-white);
+            border-radius: 5px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: var(--transition);
+            border: 2px solid var(--primary-blue);
+            cursor: pointer;
+        }
+
+        .btn:hover {
+            background-color: transparent;
+            color: var(--primary-blue);
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(0, 85, 255, 0.3);
+        }
+
+        .btn-outline {
+            background-color: transparent;
+            color: var(--primary-blue);
+        }
+
+        .btn-outline:hover {
+            background-color: var(--primary-blue);
+            color: var(--text-white);
+        }
+
+        /* Navegación */
+        header {
+            position: fixed;
+            width: 100%;
+            top: 0;
+            background-color: rgba(10, 10, 10, 0.95);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            border-bottom: 1px solid rgba(255,255,255,0.05);
+            transition: var(--transition);
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: 800;
+            letter-spacing: 2px;
+            color: var(--text-white);
+        }
+
+        .logo span {
+            color: var(--primary-blue);
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 20px;
+        }
+
+        .nav-links a {
+            font-size: 14px;
+            font-weight: 600;
+            text-transform: uppercase;
+            transition: var(--transition);
+        }
+
+        .nav-links a:hover {
+            color: var(--primary-blue);
+        }
+
+        /* Menú Hamburguesa para móviles */
+        .menu-toggle {
+            display: none;
+            font-size: 24px;
+            cursor: pointer;
+        }
+
+        /* Secciones Comunes */
+        section {
+            padding: 100px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 36px;
+            margin-bottom: 50px;
+            text-transform: uppercase;
+        }
+
+        .section-title span {
+            color: var(--primary-blue);
+        }
+
+        /* Inicio / Hero Section */
+        #inicio {
+            height: 100vh;
+            max-width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            background: linear-gradient(rgba(10, 10, 10, 0.8), rgba(10, 10, 10, 0.9)), url('https://images.unsplash.com/photo-1508514177221-188b1cf16e9d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80') center/cover;
+            padding: 0 20px;
+            margin-top: 0;
+        }
+
+        .hero-content {
+            max-width: 800px;
+            animation: fadeIn 1.5s ease-out;
+        }
+
+        .hero-content h1 {
+            font-size: 50px;
+            margin-bottom: 20px;
+        }
+
+        .hero-content p {
+            font-size: 20px;
+            color: var(--text-gray);
+            margin-bottom: 30px;
+        }
+
+        .hero-features {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-bottom: 40px;
+            flex-wrap: wrap;
+        }
+
+        .hero-features span {
+            background: rgba(0, 85, 255, 0.2);
+            padding: 8px 15px;
+            border-radius: 20px;
+            font-size: 14px;
+            font-weight: 600;
+            border: 1px solid var(--primary-blue);
+        }
+
+        .hero-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        /* Acerca de Nosotros */
+        #nosotros {
+            display: flex;
+            align-items: center;
+            gap: 50px;
+        }
+
+        .nosotros-text {
+            flex: 1;
+        }
+
+        .nosotros-text p {
+            color: var(--text-gray);
+            margin-bottom: 20px;
+            font-size: 16px;
+        }
+
+        .nosotros-text p:last-child {
+            font-size: 18px;
+            font-weight: 600;
+            color: var(--text-white);
+            border-left: 4px solid var(--primary-blue);
+            padding-left: 15px;
+        }
+
+        /* Servicios */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+        }
+
+        .service-card {
+            background-color: var(--bg-dark-gray);
+            padding: 40px 30px;
+            border-radius: 10px;
+            text-align: center;
+            transition: var(--transition);
+            border-bottom: 3px solid transparent;
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px);
+            border-bottom: 3px solid var(--primary-blue);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+        }
+
+        .service-card i {
+            font-size: 50px;
+            color: var(--primary-blue);
+            margin-bottom: 20px;
+        }
+
+        .service-card h3 {
+            margin-bottom: 15px;
+            font-size: 22px;
+        }
+
+        .service-card ul {
+            list-style: none;
+            color: var(--text-gray);
+            text-align: left;
+            margin-top: 20px;
+        }
+
+        .service-card ul li {
+            margin-bottom: 10px;
+            font-size: 14px;
+        }
+
+        .service-card ul li::before {
+            content: "✓";
+            color: var(--primary-blue);
+            margin-right: 10px;
+            font-weight: bold;
+        }
+
+        /* Tienda Online Banner */
+        #tienda {
+            max-width: 100%;
+            background: linear-gradient(45deg, var(--bg-black), rgba(0, 85, 255, 0.2)), url('https://images.unsplash.com/photo-1581092160562-40aa08e78837?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80') center/cover fixed;
+            text-align: center;
+            padding: 100px 20px;
+        }
+
+        .tienda-content {
+            max-width: 800px;
+            margin: 0 auto;
+            background: rgba(10, 10, 10, 0.8);
+            padding: 50px;
+            border-radius: 15px;
+            border: 1px solid rgba(0, 85, 255, 0.3);
+            backdrop-filter: blur(5px);
+        }
+
+        .tienda-content h2 {
+            font-size: 40px;
+            margin-bottom: 20px;
+        }
+
+        .tienda-benefits {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            margin: 30px 0;
+        }
+
+        .tienda-benefits span {
+            font-size: 16px;
+            font-weight: 600;
+        }
+
+        /* Marcas */
+        .marcas-grid {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 30px;
+            align-items: center;
+        }
+
+        .marca-item {
+            font-size: 24px;
+            font-weight: 800;
+            color: var(--text-gray);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            transition: var(--transition);
+            filter: grayscale(100%);
+            opacity: 0.5;
+        }
+
+        .marca-item:hover {
+            color: var(--text-white);
+            filter: grayscale(0%);
+            opacity: 1;
+            transform: scale(1.1);
+        }
+
+        /* Proyectos */
+        .proyectos-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .proyecto-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: 10px;
+            height: 250px;
+        }
+
+        .proyecto-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .proyecto-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 85, 255, 0.8);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            transition: var(--transition);
+        }
+
+        .proyecto-item:hover img {
+            transform: scale(1.1);
+        }
+
+        .proyecto-item:hover .proyecto-overlay {
+            opacity: 1;
+        }
+
+        .proyecto-overlay h4 {
+            font-size: 20px;
+            text-align: center;
+            padding: 20px;
+        }
+
+        /* Por qué elegirnos */
+        .elegirnos-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 20px;
+            text-align: center;
+        }
+
+        .elegirnos-card {
+            background: var(--bg-dark-gray);
+            padding: 30px 20px;
+            border-radius: 10px;
+            transition: var(--transition);
+        }
+        
+        .elegirnos-card:hover {
+            background: var(--primary-blue);
+        }
+
+        .elegirnos-card i {
+            font-size: 40px;
+            margin-bottom: 15px;
+        }
+
+        /* Contacto */
+        #contacto {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+        }
+
+        .contacto-info {
+            background: var(--bg-dark-gray);
+            padding: 40px;
+            border-radius: 10px;
+        }
+
+        .contacto-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 30px;
+        }
+
+        .contacto-item i {
+            font-size: 24px;
+            color: var(--primary-blue);
+            width: 50px;
+            height: 50px;
+            background: rgba(0, 85, 255, 0.1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            margin-right: 20px;
+        }
+
+        .contacto-item p {
+            font-size: 18px;
+        }
+
+        .mapa {
+            width: 100%;
+            height: 100%;
+            min-height: 400px;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        /* Footer */
+        footer {
+            background: #050505;
+            text-align: center;
+            padding: 30px 20px;
+            border-top: 1px solid #1a1a1a;
+            color: var(--text-gray);
+            font-size: 14px;
+        }
+
+        /* Botón Flotante WhatsApp */
+        .whatsapp-float {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background-color: #25d366;
+            color: #FFF;
+            border-radius: 50px;
+            text-align: center;
+            font-size: 30px;
+            width: 60px;
+            height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 2px 2px 15px rgba(0,0,0,0.5);
+            z-index: 1000;
+            transition: transform 0.3s ease;
+        }
+
+        .whatsapp-float:hover {
+            transform: scale(1.1);
+            color: #FFF;
+        }
+
+        /* Animaciones */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Responsive */
+        @media (max-width: 992px) {
+            #contacto {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+                position: absolute;
+                top: 70px;
+                left: 0;
+                width: 100%;
+                background: var(--bg-black);
+                flex-direction: column;
+                text-align: center;
+                padding: 20px 0;
+                border-bottom: 1px solid #333;
+            }
+
+            .nav-links.active {
+                display: flex;
+            }
+
+            .menu-toggle {
+                display: block;
+            }
+
+            .hero-content h1 {
+                font-size: 35px;
+            }
+            
+            .hero-buttons {
+                flex-direction: column;
+            }
+
+            #nosotros {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header / Navegación -->
+    <header>
+        <div class="nav-container">
+            <div class="logo">ELECTRO<span>RABBIA</span></div>
+            <i class="fas fa-bars menu-toggle" id="menuToggle"></i>
+            <nav class="nav-links" id="navLinks">
+                <a href="#inicio">Inicio</a>
+                <a href="#nosotros">Nosotros</a>
+                <a href="#servicios">Servicios</a>
+                <a href="#tienda">Tienda Online</a>
+                <a href="#proyectos">Proyectos</a>
+                <a href="#contacto">Contacto</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Inicio -->
+    <section id="inicio">
+        <div class="hero-content">
+            <h1>Energía que se transforma en soluciones</h1>
+            <div class="hero-features">
+                <span>⚡ Electricidad</span>
+                <span>☀️ Energía Solar</span>
+                <span>💡 Iluminación LED</span>
+                <span>📹 Cámaras de Seguridad</span>
+            </div>
+            <div class="hero-buttons">
+                <a href="#contacto" class="btn">Solicitar Presupuesto</a>
+                <a href="#tienda" class="btn btn-outline">Tienda Online</a>
+            </div>
+        </div>
+
+    </section>
+
+    <!-- Acerca de Nosotros -->
+    <section id="nosotros">
+        <div class="nosotros-text">
+            <h2 class="section-title">Quiénes <span>Somos</span></h2>
+            <p><strong>ELECTRORABBIA</strong> nace con el objetivo de brindar soluciones integrales en electricidad, iluminación, energía solar y seguridad electrónica.</p>
+            <p>Trabajamos con hogares, comercios, industrias y establecimientos rurales en Rufino y toda la región, ofreciendo productos de calidad, asesoramiento técnico y un servicio profesional sin intermediarios.</p>
+            <p>Nuestro compromiso es acompañar cada proyecto desde la planificación hasta la puesta en marcha, brindando soluciones eficientes, seguras y duraderas.</p>
+            <p>Más que vender productos, ofrecemos soluciones.</p>
+        </div>
+    </section>
+
+    <!-- Servicios -->
+    <section id="servicios">
+        <h2 class="section-title">Nuestros <span>Servicios</span></h2>
+        <div class="services-grid">
+            <!-- Servicio 1 -->
+            <div class="service-card">
+                <i class="fas fa-bolt"></i>
+                <h3>Instalaciones Eléctricas</h3>
+                <ul>
+                    <li>Residenciales</li>
+                    <li>Comerciales</li>
+                    <li>Industriales</li>
+                    <li>Tableros eléctricos</li>
+                    <li>Automatización</li>
+                </ul>
+            </div>
+            <!-- Servicio 2 -->
+            <div class="service-card">
+                <i class="fas fa-solar-panel"></i>
+                <h3>Energía Solar</h3>
+                <ul>
+                    <li>Sistemas On Grid</li>
+                    <li>Sistemas Off Grid</li>
+                    <li>Backup energético</li>
+                    <li>Inversores Growatt</li>
+                    <li>Baterías de litio</li>
+                </ul>
+            </div>
+            <!-- Servicio 3 -->
+            <div class="service-card">
+                <i class="fas fa-lightbulb"></i>
+                <h3>Iluminación LED</h3>
+                <ul>
+                    <li>Hogar y Diseño</li>
+                    <li>Comercio</li>
+                    <li>Industria</li>
+                    <li>Alumbrado exterior</li>
+                </ul>
+            </div>
+            <!-- Servicio 4 -->
+            <div class="service-card">
+                <i class="fas fa-video"></i>
+                <h3>Cámaras de Seguridad</h3>
+                <ul>
+                    <li>Sistemas Dahua</li>
+                    <li>Cámaras Imou / Ezviz</li>
+                    <li>Monitoreo remoto 24/7</li>
+                </ul>
+            </div>
+            <!-- Servicio 5 -->
+            <div class="service-card">
+                <i class="fas fa-network-wired"></i>
+                <h3>Redes y Conectividad</h3>
+                <ul>
+                    <li>Cableado estructurado</li>
+                    <li>Redes de datos</li>
+                    <li>Ampliación WiFi</li>
+                    <li>Enlaces inalámbricos</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tienda Online -->
+    <section id="tienda">
+        <div class="tienda-content">
+            <h2>Comprá Online en <span>ELECTRORABBIA</span></h2>
+            <p>Encontrá materiales eléctricos, iluminación LED, energía solar y seguridad electrónica al mejor precio, directo a tu obra o domicilio.</p>
+            <div class="tienda-benefits">
+                <span><i class="fas fa-shield-alt" style="color:var(--primary-blue)"></i> Compra segura</span>
+                <span><i class="fas fa-headset" style="color:var(--primary-blue)"></i> Asesoramiento técnico</span>
+                <span><i class="fas fa-star" style="color:var(--primary-blue)"></i> Productos de calidad</span>
+                <span><i class="fas fa-user-tie" style="color:var(--primary-blue)"></i> Atención personalizada</span>
+            </div>
+            <!-- Reemplazar el href con el link real de la tienda -->
+            <a href=https://catalogo.duxsoftware.com.ar/electrorabbia-catalogo?sort=MAS_NUEVOS&page=1 class="btn">Ingresar a la Tienda</a>
+        </div>
+    </section>
+
+    <!-- Marcas -->
+    <section id="marcas">
+        <h2 class="section-title">Marcas que <span>Trabajamos</span></h2>
+        <div class="marcas-grid">
+            <div class="marca-item">Growatt</div>
+            <div class="marca-item">Deye</div>
+            <div class="marca-item">Dahua</div>
+            <div class="marca-item">Imou</div>
+            <div class="marca-item">Tacoma</div>
+            <div class="marca-item">BAW</div>
+            <div class="marca-item">Cobrhil</div>
+            <div class="marca-item">Capobianco</div>
+            <div class="marca-item">Sixelectric</div>
+            <div class="marca-item">Tecnocom</div>
+            <div class="marca-item">TAAD</div>
+            <div class="marca-item">LEDCO</div>
+        </div>
+    </section>
+
+    <!-- Proyectos -->
+    <section id="proyectos">
+        <h2 class="section-title">Proyectos <span>Realizados</span></h2>
+        <div class="proyectos-grid">
+            <!-- NOTA: Las imágenes son de demostración (Unsplash). Puedes cambiarlas por fotos reales de tus obras cambiando la URL en el 'src' -->
+            <div class="proyecto-item">
+                <img src="https://images.unsplash.com/photo-1509391366360-1e97d5259d62?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Instalación Solar">
+                <div class="proyecto-overlay">
+                    <h4>Instalaciones Solares</h4>
+                </div>
+            </div>
+            <div class="proyecto-item">
+                <img src="https://images.unsplash.com/photo-1557597774-9d273605dfa9?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Cámaras de seguridad">
+                <div class="proyecto-overlay">
+                    <h4>CCTV y Seguridad</h4>
+                </div>
+            </div>
+            <div class="proyecto-item">
+                <img src="https://images.unsplash.com/photo-1565514020179-026b92b84bb6?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Iluminación Industrial">
+                <div class="proyecto-overlay">
+                    <h4>Iluminación Industrial</h4>
+                </div>
+            </div>
+            <div class="proyecto-item">
+                <img src="https://images.unsplash.com/photo-1621905252507-b35492cc74b4?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Tableros Eléctricos">
+                <div class="proyecto-overlay">
+                    <h4>Tableros y Automatización</h4>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Por qué elegirnos -->
+    <section id="elegirnos">
+        <h2 class="section-title">¿Por qué <span>Elegirnos?</span></h2>
+        <div class="elegirnos-grid">
+            <div class="elegirnos-card">
+                <i class="fas fa-bolt"></i>
+                <h4>Experiencia</h4>
+            </div>
+            <div class="elegirnos-card">
+                <i class="fas fa-leaf"></i>
+                <h4>Energía Renovable</h4>
+            </div>
+            <div class="elegirnos-card">
+                <i class="fas fa-tools"></i>
+                <h4>Soluciones Integrales</h4>
+            </div>
+            <div class="elegirnos-card">
+                <i class="fas fa-microchip"></i>
+                <h4>Última Tecnología</h4>
+            </div>
+            <div class="elegirnos-card">
+                <i class="fas fa-handshake"></i>
+                <h4>Atención Personalizada</h4>
+            </div>
+            <div class="elegirnos-card">
+                <i class="fas fa-wrench"></i>
+                <h4>Servicio Postventa</h4>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contacto -->
+    <!-- Cobertura Regional -->
+<section id="cobertura">
+    <h2 class="section-title">Nuestra <span>Cobertura</span></h2>
+
+    <div class="cobertura-container">
+
+        <div class="cobertura-info">
+
+            <h3>🚚 Llegamos donde tu proyecto nos necesite</h3>
+
+            <p>
+                Desde Rufino, Santa Fe, brindamos servicios profesionales
+                en un radio de hasta <strong>300 kilómetros</strong>.
+            </p>
+
+            <div class="cobertura-grid">
+
+                <div class="cobertura-card">
+                    ⚡ Instalaciones Eléctricas
+                </div>
+
+                <div class="cobertura-card">
+                    ☀️ Energía Solar
+                </div>
+
+                <div class="cobertura-card">
+                    💡 Iluminación LED
+                </div>
+
+                <div class="cobertura-card">
+                    📹 Seguridad Electrónica
+                </div>
+
+                <div class="cobertura-card">
+                    🌐 Redes y Conectividad
+                </div>
+
+                <div class="cobertura-card">
+                    🏭 Proyectos Industriales
+                </div>
+
+            </div>
+
+            <div class="radio-box">
+                <h4>📍 Cobertura Técnica y Comercial</h4>
+                <p>
+                    Hasta 300 km alrededor de Rufino, Santa Fe.
+                </p>
+            </div>
+
+        </div>
+
+    </div>
+    <section id="contacto">
+        <div class="contacto-info">
+            <h2 class="section-title" style="text-align: left; margin-bottom: 30px;">Ponete en <span>Contacto</span></h2>
+            
+            <div class="contacto-item">
+                <i class="fas fa-map-marker-alt"></i>
+                <p>Rufino, Santa Fe, Argentina</p>
+            </div>
+            
+            <div class="contacto-item">
+                <i class="fab fa-whatsapp"></i>
+                <p><a href="https://wa.me/543382673234" target="_blank">+54 3382 673234</a></p>
+            </div>
+            
+            <div class="contacto-item">
+                <i class="fas fa-envelope"></i>
+                <p><a href="mailto:contacto@electrorabbia.com.ar">contacto@electrorabbia.com.ar</a></p>
+            </div>
+            
+            <div class="contacto-item">
+                <i class="fab fa-instagram"></i>
+                <p><a href="https://instagram.com/electrorabbia" target="_blank">@electrorabbia</a></p>
+            </div>
+
+            <div class="contacto-item">
+                <i class="fab fa-facebook-f"></i>
+                <p><a href="https://facebook.com/Electrorabbia" target="_blank">Electrorabbia</a></p>
+            </div>
+        </div>
+
+        <div class="mapa">
+            <!-- Google Maps Embed de Rufino, Santa Fe -->
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d52843.5135677934!2d-62.7486819!3d-34.2694503!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95c73bbbd5dcf2bb%3A0x89e02377b9499876!2sRufino%2C%20Santa%20Fe!5e0!3m2!1ses-419!2sar!4v1718290000000!5m2!1ses-419!2sar" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 ELECTRORABBIA. Todos los derechos reservados. | Energía que se transforma en soluciones.</p>
+    </footer>
+
+    <!-- Botón Flotante WhatsApp -->
+    <a href="https://wa.me/543382673234?text=Hola%20Electrorabbia,%20vengo%20desde%20la%20página%20web%20y%20quisiera%20hacer%20una%20consulta." class="whatsapp-float" target="_blank" rel="noopener noreferrer">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- JavaScript para el Menú y Efectos -->
+    <script>
+        // Menú hamburguesa para versión móvil
+        const menuToggle = document.getElementById('menuToggle');
+        const navLinks = document.getElementById('navLinks');
+
+        menuToggle.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+
+        // Cerrar menú al hacer clic en un enlace (móviles)
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('active');
+            });
+        });
+
+        // Cambio de fondo del header al hacer scroll
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('header');
+            if (window.scrollY > 50) {
+                header.style.backgroundColor = 'rgba(5, 5, 5, 0.98)';
+                header.style.boxShadow = '0 2px 10px rgba(0,0,0,0.5)';
+            } else {
+                header.style.backgroundColor = 'rgba(10, 10, 10, 0.95)';
+                header.style.boxShadow = 'none';
+            }
+        });
+    </script>
+</body>
+</html>
