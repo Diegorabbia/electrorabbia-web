@@ -1,9 +1,7 @@
-HTML
 <!DOCTYPE html>
 <html lang="es">
-<head
-    <meta name="description" content="ELECTRORABBIA - Energía solar, materiales eléctricos, iluminación LED, cámaras de seguridad y soluciones tecnológicas en Rufino y la región.">
-    <title>ELECTRORABBIA | Energía Solar, Electricidad y Seguridad Electrónica</title>
+<head>
+
     <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-SZPJETY6NG"></script>
 <script>
@@ -16,9 +14,9 @@ HTML
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- SEO -->
-    <meta name="description" content="ELECTRORABBIA - Energía que se transforma en soluciones. Especialistas en materiales eléctricos, iluminación LED, energía solar y sistemas de seguridad electrónica en Rufino, Santa Fe.">
-    <meta name="keywords" content="electricista en Rufino, energía solar Rufino, paneles solares Santa Fe, instalación solar, Growatt Argentina, cámaras Dahua, materiales eléctricos, iluminación LED, electricidad industrial, sistemas fotovoltaicos">
-    <title>ELECTRORABBIA | Electricidad - Iluminacion - Camaras - Energia Solar</title>
+    <meta name="description" content="ER GROUP by ELECTRORABBIA. Energía que se transforma en soluciones. ER SOLAR, ER SERVICIOS para empresas, campo y municipios, ER SECURITY y ER SHOP en Rufino, Santa Fe.">
+    <meta name="keywords" content="ER GROUP, ELECTRORABBIA, ER SOLAR, ER SERVICIOS, ER SECURITY, ER SHOP, energía solar Rufino, electricidad industrial, cámaras Dahua, materiales eléctricos, proyectos rurales, municipios">
+    <title>ER GROUP | ELECTRORABBIA — Energía, Servicios, Security y Shop</title>
 
     
     <!-- Google Fonts -->
@@ -608,6 +606,31 @@ HTML
         border-radius: 12px;
     }
 }
+
+        /* ER GROUP: integración conservadora a la web original */
+        .brand-header {display:flex;align-items:center;gap:10px;min-width:0}
+        .brand-header img {width:55px;height:55px;object-fit:contain;border-radius:0}
+        .brand-header-text {display:flex;flex-direction:column;line-height:1.2}
+        .brand-header-text strong {font-size:17px;letter-spacing:1px;color:#fff}
+        .brand-header-text small {font-size:10px;color:#afc9e3;letter-spacing:.4px}
+        .hero-brand {width:360px;max-width:85vw;height:auto;object-fit:contain;display:block;margin:0 auto 16px;filter:drop-shadow(0 0 18px rgba(0,125,255,.22))}
+        .hero-kicker {font-size:12px;color:#6dcfff;font-weight:800;letter-spacing:2px;margin-bottom:12px}
+        .hero-content h1 {font-size:44px}
+        .divisiones-grid {display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:17px}
+        .division-card {background:#151515;border:1px solid #292d39;border-radius:12px;overflow:hidden;transition:transform .25s ease,border-color .25s ease}
+        .division-card:hover {transform:translateY(-6px);border-color:var(--accent)}
+        .division-card img {width:100%;aspect-ratio:1/1;object-fit:cover;display:block}
+        .division-card-content {padding:17px 18px 21px;border-top:3px solid var(--accent)}
+        .division-card h3 {font-size:18px;margin-bottom:8px;color:var(--accent)}
+        .division-card p {font-size:13px;color:#c8c8c8;line-height:1.6}
+        .division-card .division-link {display:inline-block;margin-top:14px;font-weight:800;font-size:12px;color:#fff;border-bottom:1px solid var(--accent)}
+        .site-signature {font-size:12px;color:#a8c7e3;margin-top:14px;letter-spacing:.5px}
+        .nav-links {align-items:center;gap:15px}
+        .nav-links a {font-size:12px}
+        #tienda .er-shop-label {color:#ffd438;font-weight:800;letter-spacing:1px}
+        @media(max-width:992px){.divisiones-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.brand-header img{width:44px;height:44px}}
+        @media(max-width:768px){.divisiones-grid{grid-template-columns:1fr}.brand-header-text strong{font-size:15px}.brand-header-text small{font-size:9px}.hero-content h1{font-size:30px}.hero-brand{width:150px}.nav-container{padding:12px 16px}#inicio{padding-top:100px;min-height:780px;height:auto}.nav-links{top:65px}}
+
     </style>
 </head>
 <body>
@@ -615,11 +638,12 @@ HTML
     <!-- Header / Navegación -->
     <header>
         <div class="nav-container">
-            <div class="logo">ELECTRO<span>RABBIA</span></div>
+            <a class="brand-header" href="#inicio" aria-label="ER GROUP - ELECTRORABBIA"><img src="images/er-group.png" alt="Logo ER GROUP" loading="eager"><span class="brand-header-text"><strong>ER GROUP</strong><small>ELECTRORABBIA</small></span></a>
             <i class="fas fa-bars menu-toggle" id="menuToggle"></i>
             <nav class="nav-links" id="navLinks">
                 <a href="#inicio">Inicio</a>
                 <a href="#nosotros">Nosotros</a>
+                <a href="#divisiones">ER GROUP</a>
                 <a href="#servicios">Servicios</a>
                 <a href="#tienda">Tienda Online</a>
                 <a href="cotizacion-solar.html">☀️ Cotización Solar</a>
@@ -632,7 +656,9 @@ HTML
     <!-- Inicio -->
     <section id="inicio">
         <div class="hero-content">
-            <h1>Energía que se transforma en soluciones</h1>
+            <img class="hero-brand" src="images/er-group.png" alt="ER GROUP — ELECTRORABBIA" fetchpriority="high">
+            <div class="hero-kicker">ER GROUP · ELECTRORABBIA</div>
+            <h1>ENERGÍA QUE SE TRANSFORMA EN SOLUCIONES</h1>
             <div class="hero-features">
                  <span>⚡ Electricidad</span>
             <span>☀️ Energía Solar</span>
@@ -667,6 +693,32 @@ HTML
         </div>
     </section>
 
+
+    <!-- Divisiones oficiales de ER GROUP -->
+    <section id="divisiones">
+        <h2 class="section-title">Conocé <span>ER GROUP</span></h2>
+        <p style="text-align:center;color:#b3b3b3;max-width:850px;margin:-25px auto 35px">ELECTRORABBIA integra cuatro unidades especializadas, con una misma identidad y compromiso técnico.</p>
+        <div class="divisiones-grid">
+            <article class="division-card" style="--accent:#49d94e">
+                <img src="images/er-solar.webp" loading="lazy" alt="ER SOLAR - ELECTRORABBIA">
+                <div class="division-card-content"><h3>ER SOLAR</h3><p>Sistemas fotovoltaicos, baterías, inversores, bombeo y mantenimiento solar.</p><a class="division-link" href="cotizacion-solar.html">Cotizar energía solar →</a></div>
+            </article>
+            <article class="division-card" style="--accent:#ff8a25">
+                <img src="images/er-servicios.webp" loading="lazy" alt="ER SERVICIOS - ELECTRORABBIA">
+                <div class="division-card-content"><h3>ER SERVICIOS</h3><p>Obras, electricidad y mantenimiento para empresas, industrias, campo y municipios. Sin servicios domiciliarios.</p><a class="division-link" href="cotizacion-general.html">Solicitar presupuesto →</a></div>
+            </article>
+            <article class="division-card" style="--accent:#34bbff">
+                <img src="images/er-security.webp" loading="lazy" alt="ER SECURITY - ELECTRORABBIA">
+                <div class="division-card-content"><h3>ER SECURITY</h3><p>Cámaras, videovigilancia IP, enlaces WiFi, redes y control de accesos.</p><a class="division-link" href="#contacto">Consultar soluciones →</a></div>
+            </article>
+            <article class="division-card" style="--accent:#ffd438">
+                <img src="images/er-shop.webp" loading="lazy" alt="ER SHOP - ELECTRORABBIA">
+                <div class="division-card-content"><h3>ER SHOP</h3><p>Materiales eléctricos, iluminación LEDCO, accesorios y tecnología.</p><a class="division-link" href="#tienda">Ir a la tienda →</a></div>
+            </article>
+        </div>
+        <p class="site-signature" style="text-align:center">ELECTRORABBIA · ENERGÍA QUE SE TRANSFORMA EN SOLUCIONES</p>
+    </section>
+
     <!-- Servicios -->
     <section id="servicios">
         <h2 class="section-title">Nuestros <span>Servicios</span></h2>
@@ -674,9 +726,9 @@ HTML
             <!-- Servicio 1 -->
             <div class="service-card">
                 <i class="fas fa-bolt"></i>
-                <h3>Instalaciones Eléctricas</h3>
+                <h3>Instalaciones Eléctricas · ER SERVICIOS</h3>
                 <ul>
-                    <li>Residenciales</li>
+                    <li>Empresas, industrias y municipios</li>
                     <li>Comerciales</li>
                     <li>Industriales</li>
                     <li>Tableros eléctricos</li>
@@ -771,8 +823,7 @@ HTML
     <!-- Tienda Online -->
     <section id="tienda">
         <div class="tienda-content">
-            <h2>Comprá Online en <span>NUESTRA</span></h2>
-            <span>TIENDA</span></h2>
+            <h2>Comprá online en <span class="er-shop-label">ER SHOP</span></h2>
             <p>Encontrá materiales eléctricos, iluminación LED, energía solar y seguridad electrónica al mejor precio, directo a tu obra o domicilio.</p>
             <div class="tienda-benefits">
                 <span><i class="fas fa-shield-alt" style="color:var(--primary-blue)"></i> Compra segura</span>
@@ -781,7 +832,7 @@ HTML
                 <span><i class="fas fa-user-tie" style="color:var(--primary-blue)"></i> Atención personalizada</span>
             </div>
             <!-- Reemplazar el href con el link real de la tienda -->
-            <a href=https://catalogo.duxsoftware.com.ar/electrorabbia-catalogo?sort=MAS_NUEVOS&page=1 class="btn">Ingresar a la Tienda</a>
+            <a href="https://catalogo.duxsoftware.com.ar/electrorabbia-catalogo?sort=MAS_NUEVOS&amp;page=1" class="btn" target="_blank" rel="noopener noreferrer">Ingresar a la Tienda</a>
         </div>
     </section>
 
@@ -819,7 +870,7 @@ HTML
         <div class="proyectos-grid">
             <!-- NOTA: Las imágenes son de demostración (Unsplash). Puedes cambiarlas por fotos reales de tus obras cambiando la URL en el 'src' -->
             <div class="proyecto-item">
-                <img src="images/solar.jpg"Instalación Solar">
+                <img src="images/solar.jpg" alt="Instalación Solar">
                 <div class="proyecto-overlay">
                     <h4>Instalaciones Solares</h4>
                 </div>
@@ -837,13 +888,13 @@ HTML
                 </div>
             </div>
             <div class="proyecto-item">
-                <img src="images/tableros industriales.jpg"Tableros Eléctricos">
+                <img src="images/tableros industriales.jpg" alt="Tableros Eléctricos">
                 <div class="proyecto-overlay">
                     <h4>Tableros y Automatización</h4>
                 </div>
             </div>
             <div class="proyecto-item">
-                <img src="images/monitoreo.jpg"Centros de Monitoreo">
+                <img src="images/monitoreo.jpg" alt="Centros de Monitoreo">
                 <div class="proyecto-overlay">
                     <h4>Centros de Monitoreo</h4>
                 </div>
@@ -926,7 +977,7 @@ HTML
                 <div class="cobertura-card">
                     ☀️ Energía Solar
                 </div>
-               <div class="cotizacion-solar.html">☀️ Cotización Solar</a>
+               <div class="cobertura-card"><a href="cotizacion-solar.html">☀️ Cotización Solar</a></div>
 
                 <div class="cobertura-card">
                     💡 Iluminación LED
@@ -956,6 +1007,7 @@ HTML
         </div>
 
     </div>
+    </section>
     <section id="contacto">
         <div class="contacto-info">
             <h2 class="section-title" style="text-align: left; margin-bottom: 30px;">Ponete en <span>Contacto</span></h2>
@@ -972,7 +1024,7 @@ HTML
             
             <div class="contacto-item">
                 <i class="fas fa-envelope"></i>
-                <p><a href="mailto:contacto@electrorabbia.com.ar">electrorabbia.ventas@gmail.com</a></p>
+                <p><a href="mailto:electrorabbia.ventas@gmail.com">electrorabbia.ventas@gmail.com</a></p>
             </div>
             
             <div class="contacto-item">
@@ -982,7 +1034,7 @@ HTML
 
             <div class="contacto-item">
                 <i class="fab fa-facebook-f"></i>
-                <p><a href=https://www.facebook.com/RabbiaLeds/" target="_blank">Electrorabbia</a></p>
+                <p><a href="https://www.facebook.com/RabbiaLeds/" target="_blank" rel="noopener noreferrer">Electrorabbia</a></p>
             </div>
         </div>
 
@@ -994,7 +1046,8 @@ HTML
 
     <!-- Footer -->
     <footer>
-        <p>&copy; 2026 ELECTRORABBIA. Todos los derechos reservados. | Energía que se transforma en soluciones.</p>
+        <p>&copy; 2026 ER GROUP · ELECTRORABBIA. Todos los derechos reservados.</p>
+        <p>ENERGÍA QUE SE TRANSFORMA EN SOLUCIONES</p>
     </footer>
 
     <!-- Botón Flotante WhatsApp -->
